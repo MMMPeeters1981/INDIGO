@@ -1,0 +1,1130 @@
+; Sat May 17 00:53:20 CEST 2014
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot provided_by_game_world_concept
+		(type INSTANCE)
+;+		(allowed-classes Game_world_concept)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot uses_object
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write))
+	(multislot requires_competence
+		(type INSTANCE)
+;+		(allowed-classes Competence)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot affordance_children
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+;+		(inverse-slot affordance_parent)
+		(create-accessor read-write))
+	(multislot generates_scenario_plan
+		(type INSTANCE)
+;+		(allowed-classes Scenario_plan)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Translates_to_performance
+		(type INSTANCE)
+;+		(allowed-classes Performance)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot implements
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot controls_character
+		(type INSTANCE)
+;+		(allowed-classes Character)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot changes_or_creates_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(single-slot linked_to_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot specifies_action_sequence
+		(type INSTANCE)
+;+		(allowed-classes Action_sequence)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot causes_event
+		(type INSTANCE)
+;+		(allowed-classes Event)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot children
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+;+		(inverse-slot parents)
+		(create-accessor read-write))
+	(single-slot required_by_game_dynamics
+		(type INSTANCE)
+;+		(allowed-classes Game_dynamics)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot decomposition
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write))
+	(single-slot addresses_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Learning_goal)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_time_out
+		(type INSTANCE)
+;+		(allowed-classes Time_out)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot works_on_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(create-accessor read-write))
+	(multislot aims_to_improve_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot executes_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot part_of_virtual_world
+		(type INSTANCE)
+;+		(allowed-classes Virtual_world)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot affordance_parent
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+;+		(cardinality 0 1)
+;+		(inverse-slot affordance_children)
+		(create-accessor read-write))
+	(single-slot plays_role
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot resposible_for_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot requires_affordance
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot provides_observable
+		(type INSTANCE)
+;+		(allowed-classes Observable)
+		(create-accessor read-write))
+	(multislot contains_annotated_game_element
+		(type INSTANCE)
+;+		(allowed-classes Annotated_game_element)
+		(create-accessor read-write))
+	(multislot controls_functional_component
+		(type INSTANCE)
+;+		(allowed-classes PEG+Functional+Component)
+		(create-accessor read-write))
+	(multislot addresses_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot alternative_common_error
+		(type INSTANCE)
+;+		(allowed-classes Common_error)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot relevant_to_triggers_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write))
+	(single-slot specifies_narrative_goal
+		(type INSTANCE)
+;+		(allowed-classes Narrative_goal)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot satisfies_scenario_constraint
+		(type INSTANCE)
+;+		(allowed-classes Scenario_constraint)
+		(create-accessor read-write))
+	(multislot Leads_to_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot min_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot uses_annotated_game_element
+		(type INSTANCE)
+;+		(allowed-classes Annotated_game_element)
+		(create-accessor read-write))
+	(single-slot specifies_virtual_world
+		(type INSTANCE)
+;+		(allowed-classes Virtual_world)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot determines_procedure
+		(type INSTANCE)
+;+		(allowed-classes Procedure)
+		(create-accessor read-write))
+	(single-slot includes_action
+		(type INSTANCE)
+;+		(allowed-classes Action)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot executed_by_procedure
+		(type INSTANCE)
+;+		(allowed-classes Procedure)
+		(create-accessor read-write))
+	(multislot offers
+		(type INSTANCE)
+;+		(allowed-classes Affordance_Implementation)
+;+		(inverse-slot smartObject)
+		(create-accessor read-write))
+	(multislot specific_for_common_error
+		(type INSTANCE)
+;+		(allowed-classes Common_error)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot uses_authoring_tool
+		(type INSTANCE)
+;+		(allowed-classes Authoring_tool)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot constraints
+		(type INSTANCE)
+;+		(allowed-classes Affordance_Implementation)
+;+		(inverse-slot constraints)
+		(create-accessor read-write))
+	(multislot possesses_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot has_description
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot decompositions
+		(type INSTANCE)
+;+		(allowed-classes DecompositionSchema)
+;+		(inverse-slot task)
+		(create-accessor read-write))
+	(multislot Based_on_mental_state_competence_level_performance
+		(type INSTANCE)
+;+		(allowed-classes Competence_level Performance Mental_state)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot destroys_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(multislot actors
+		(type STRING)
+		(create-accessor read-write))
+	(multislot rare_in_setting_scenery
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(single-slot controls_avatar
+		(type INSTANCE)
+;+		(allowed-classes Avatar)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot triggers_subtask
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write))
+	(multislot unexpected_settings
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(multislot addresses_domain_knowledge_skill
+		(type INSTANCE)
+;+		(allowed-classes Domain_knowledge Skill)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot refers_to_competence
+		(type INSTANCE)
+;+		(allowed-classes Competence)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot has_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot changes_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(multislot common_in_setting_scenery
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(single-slot INDIGO_Class0
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot offers_affordance
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot contains_subtask
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write))
+	(multislot creates_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(multislot precondition_objects
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write))
+	(multislot precondition_services
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot uses
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(single-slot is_in_mental_state
+		(type INSTANCE)
+;+		(allowed-classes Mental_state)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot displayed_behaviour
+		(type INSTANCE)
+;+		(allowed-classes Behavior)
+		(create-accessor read-write))
+	(multislot contains_object
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write))
+	(single-slot task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+;+		(cardinality 1 1)
+;+		(inverse-slot decompositions)
+		(create-accessor read-write))
+	(single-slot type
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot tasks
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot based_on_behaviour
+		(type INSTANCE)
+;+		(allowed-classes Behavior)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot ontology_Class40006
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot requires
+		(type INSTANCE)
+;+		(allowed-classes AtomTask)
+		(create-accessor read-write))
+	(multislot expected_settings
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(multislot contains_subrole
+		(type INSTANCE)
+;+		(allowed-classes Role)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot is_sent_to_NPC
+		(type INSTANCE)
+;+		(allowed-classes NPC)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot specifies_scenario_constraint
+		(type INSTANCE)
+;+		(allowed-classes Scenario_constraint)
+		(create-accessor read-write))
+	(multislot updates_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot smartObject
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+;+		(cardinality 1 1)
+;+		(inverse-slot offers)
+		(create-accessor read-write))
+	(multislot depends_on_information
+		(type INSTANCE)
+;+		(allowed-classes Information)
+		(create-accessor read-write))
+	(multislot provides_information
+		(type INSTANCE)
+;+		(allowed-classes Information)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+;+		(inverse-slot children)
+		(create-accessor read-write))
+	(single-slot has_objective
+		(type SYMBOL)
+		(allowed-values monitor_process establish_situation)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot max_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass DomainConcept
+	(is-a USER)
+	(role abstract)
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Didactics_concept
+	(is-a DomainConcept)
+	(role concrete))
+
+(defclass Adaptive_strategy
+	(is-a Didactics_concept)
+	(role concrete)
+	(multislot Based_on_mental_state_competence_level_performance
+		(type INSTANCE)
+;+		(allowed-classes Competence_level Performance Mental_state)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Feedback "Feedback is (explicit or implicit) information that is provided to the trainee in response to his performance. This may be an in-game direct event confronting the trainee with a consequence of a particular action, e.g. the patient dies because you failed to recognize a corpus alienum obstructing the airways. It may also be a vocal or textual comment provided during after action review, delivering extra information to explain the assessment or evaluation of the performance, e.g. the patient died because you failed to recognize the corpus alienum. If you would have performed a check on the victim's respiratory system, you would have noticed the lack of breathing, if you would have performed a mouth check you would have seen the corpus alienum. You failed your learning goal `performing bodily checks to diagnoze the victim's lesions'."
+	(is-a Adaptive_strategy)
+	(role concrete)
+	(multislot specific_for_common_error
+		(type INSTANCE)
+;+		(allowed-classes Common_error)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Scaffolding
+	(is-a Adaptive_strategy)
+	(role concrete))
+
+(defclass Reflection
+	(is-a Adaptive_strategy)
+	(role concrete))
+
+(defclass Learning_goal_selection
+	(is-a Adaptive_strategy)
+	(role concrete)
+	(multislot Leads_to_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Competence_level "The competence level refers to the level of competence a person possesses"
+	(is-a Didactics_concept)
+	(role concrete)
+	(single-slot refers_to_competence
+		(type INSTANCE)
+;+		(allowed-classes Competence)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Behavior
+	(is-a Didactics_concept)
+	(role concrete)
+	(single-slot Translates_to_performance
+		(type INSTANCE)
+;+		(allowed-classes Performance)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Performance "The performance is the performance the trainee displayed while executing the learning task. This may be over multiple runs or just the last one. The performance is evaluated and the evaluation in turn is used to derive the trainee's competence level. Please note that the performance and the competences are not the same thing, since performance is also dependent of attention, motivation, self-efficacy, etc."
+	(is-a Didactics_concept)
+	(role concrete)
+	(multislot updates_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot based_on_behaviour
+		(type INSTANCE)
+;+		(allowed-classes Behavior)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Scenario "A scenario is a storyline in which the trainee is challenged and invited to perform a task that is relevant to his/her learning focus. It consists of a collection of game elements within a setting. The game elements each have their own features and behaviours. As soon as the storyline starts, the elements will start interacting with each other and with the trainee, thereby acting out the back-story, providing a believable reason for performing the learning task, then continuing by reacting upon the behaviour displayed by the trainee. Information about the intended action plan for the trainee is available, as well as the objective in terms of a final goal-state."
+	(is-a Didactics_concept)
+	(role concrete)
+	(multislot addresses_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Personalized_learning_goal "The competence that is (are) currently trained and evaluated. The current exercises are all directed at improving the competence that is currently selected for the learning focus. This focus is also used to determine the points of improvement during feedback and reflection. In addition, the learning focus is employed to determine whether an intervention is appropriate."
+	(is-a Didactics_concept)
+	(role concrete)
+	(multislot addresses_domain_knowledge_skill
+		(type INSTANCE)
+;+		(allowed-classes Domain_knowledge Skill)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot aims_to_improve_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Mental_state
+	(is-a Didactics_concept)
+	(role concrete))
+
+(defclass Motivation "Motivation is the extent to which the trainee is willing to invest effort into training and the reason for this willingness (high motivation, intrinsic motivation, performance-oriented motivation, etc.)."
+	(is-a Mental_state)
+	(role concrete))
+
+(defclass Self_efficacy "Self-efficacy refers to the extent to which a trainee believes in his/her own competences to succesfully accomplish a task."
+	(is-a Mental_state)
+	(role concrete))
+
+(defclass Mental_effort "The mental effort is the amount of effort it costs the trainee to execute the task."
+	(is-a Mental_state)
+	(role concrete))
+
+(defclass Emotional_state "The emotional state can be stressed, happy, engaged, immersed, in flow, motivated, bored, frustrated, distracted, sad, demotivated, insecure, etc."
+	(is-a Mental_state)
+	(role concrete))
+
+(defclass Task_domain_concept
+	(is-a DomainConcept)
+	(role concrete))
+
+(defclass Competence "Competences are characteristics that can be developed through training. There are three types of competences: skills, knowledge, and attitudes."
+	(is-a Task_domain_concept)
+	(role concrete))
+
+(defclass Attitude "An attitude is a disposition to perform a particular type of behaviour, e.g. feel the need and responsibility to check and secure the environment, or keep calm at all times. After training, these types of behaviours should be performed without thinking, almost innately."
+	(is-a Competence)
+	(role concrete))
+
+(defclass Task_knowledge "Task knowledge is all the knowledge required to execute a task. It can be divided into three types of task knowledge: assumed knowledge, domain knowledge, and world knowledge."
+	(is-a Competence)
+	(role concrete))
+
+(defclass Assumed_knowledge "Assumed knowledge is knowledge that a person can be assumed to possess, e.g. world dynamics, such as gravity and physics, and normal human behaviour, such as social conventions, recognizing and avoiding dangerous situations, etc."
+	(is-a Task_knowledge)
+	(role concrete))
+
+(defclass Domain_knowledge "Knowledge that is specific to the task domain and cannot be expected to be known by laymen. It is knowledge that can only be obtained by participating in an educational program in the task domain."
+	(is-a Task_knowledge)
+	(role concrete))
+
+(defclass Situation_awareness
+	(is-a Task_knowledge)
+	(role concrete)
+	(multislot determines_procedure
+		(type INSTANCE)
+;+		(allowed-classes Procedure)
+		(create-accessor read-write))
+	(multislot depends_on_information
+		(type INSTANCE)
+;+		(allowed-classes Information)
+		(create-accessor read-write)))
+
+(defclass Skill "An apility and capacity obtained through deliberate, systematic, and persistent efforts to fluently and adaptively perform complex activities or tasks that revolve around ideas (cognitive skills), things (technical skills), and/or people (interpersonal skills)."
+	(is-a Competence)
+	(role concrete))
+
+(defclass Self_directedness
+	(is-a Skill)
+	(role concrete))
+
+(defclass Time "Time is a relevant concept in task execution. It places conditions on tasks, guides the coordination of simultaneous task performances, and is therefore important for the planning of a task. Tasks take up a certain amount of time before they are finished. In addition: after a certain amount of time the circumstances may change when a task has not been executed in time, e.g. a patient may die is noone calls an ambulance, but this does not happen straight away, maybe after an hour."
+	(is-a Task_domain_concept)
+	(role concrete)
+	(multislot relevant_to_triggers_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write)))
+
+(defclass Role "A role is defined as the responsibility for a set of tasks."
+	(is-a Task_domain_concept)
+	(role concrete)
+	(multislot resposible_for_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot contains_subrole
+		(type INSTANCE)
+;+		(allowed-classes Role)
+		(create-accessor read-write)))
+
+(defclass Procedure "A procedure is a sequence of actions that will lead to the achievement of the task's objective."
+	(is-a Task_domain_concept)
+	(role concrete)
+	(single-slot includes_action
+		(type INSTANCE)
+;+		(allowed-classes Action)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Information "Information is required for the trainee to construct relevant world knowledge. Information can be obtained  or provided through communication with the characters or observations of world features (also called observables)."
+	(is-a Task_domain_concept)
+	(role concrete)
+	(multislot relevant_to_triggers_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write)))
+
+(defclass Circumstance "A circumstance is a higher level abstraction of the game world's features and situation. It results from an interpretation of the game world based on the task domain's perspective. For instance: safety level, danger level, amount of time pressure, level of distraction, etc."
+	(is-a Task_domain_concept)
+	(role concrete)
+	(multislot relevant_to_triggers_task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write)))
+
+(defclass Task
+	(is-a Task_domain_concept)
+	(role concrete)
+	(multislot decompositions
+		(type INSTANCE)
+;+		(allowed-classes DecompositionSchema)
+		(create-accessor read-write))
+	(multislot uses
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot executed_by_procedure
+		(type INSTANCE)
+;+		(allowed-classes Procedure)
+		(create-accessor read-write))
+	(multislot requires_competence
+		(type INSTANCE)
+;+		(allowed-classes Competence)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot has_objective
+		(type SYMBOL)
+		(allowed-values monitor_process establish_situation)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot triggers_subtask
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write)))
+
+(defclass AtomTask
+	(is-a Task)
+	(role concrete))
+
+(defclass Game_world_concept
+	(is-a DomainConcept)
+	(role concrete))
+
+(defclass Observable
+	(is-a Game_world_concept)
+	(role concrete)
+	(multislot provides_information
+		(type INSTANCE)
+;+		(allowed-classes Information)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Game_element "All `tangible' elements that can be placed  in the game world."
+	(is-a Game_world_concept)
+	(role concrete)
+	(multislot provides_observable
+		(type INSTANCE)
+;+		(allowed-classes Observable)
+		(create-accessor read-write))
+	(multislot common_in_setting_scenery
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(multislot rare_in_setting_scenery
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(multislot offers_affordance
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write)))
+
+(defclass Character "A character is a human-like entity that can adopt roles in the storyline and is able to execute actions. The player is also able to have a two way-interaction with the characters."
+	(is-a Game_element)
+	(role concrete)
+	(single-slot plays_role
+		(type INSTANCE)
+;+		(allowed-classes Role)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot uses_object
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write)))
+
+(defclass AbstractSmartObject
+	(is-a Game_element)
+	(role abstract)
+	(multislot offers
+		(type INSTANCE)
+;+		(allowed-classes Affordance_Implementation)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write)))
+
+(defclass SmartObject
+	(is-a AbstractSmartObject)
+	(role concrete)
+	(multislot expected_settings
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes SmartObjectType)
+		(create-accessor read-write))
+	(multislot unexpected_settings
+		(type INSTANCE)
+;+		(allowed-classes Setting)
+		(create-accessor read-write)))
+
+(defclass Agent
+	(is-a SmartObject)
+	(role concrete)
+	(single-slot type
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes AgentType_intelligent_object)
+		(create-accessor read-write)))
+
+(defclass SmartObjectType
+	(is-a AbstractSmartObject)
+	(role concrete)
+	(multislot children
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes SmartObjectType)
+		(create-accessor read-write)))
+
+(defclass AgentType_intelligent_object
+	(is-a SmartObjectType)
+	(role concrete)
+	(single-slot type
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot parents
+		(type INSTANCE)
+;+		(allowed-classes AgentType_intelligent_object)
+		(create-accessor read-write)))
+
+(defclass Game_dynamics "Concepts that may imply or cause changes in the state of the world."
+	(is-a Game_world_concept)
+	(role concrete)
+	(multislot requires_affordance
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot provides_observable
+		(type INSTANCE)
+;+		(allowed-classes Observable)
+		(create-accessor read-write))
+	(multislot changes_or_creates_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write)))
+
+(defclass Action "Actions can be executed by an agent and cause changes in the world through events. They can require world knowledge or world features before an agent is able to execute them correctly."
+	(is-a Game_dynamics)
+	(role concrete)
+	(multislot causes_event
+		(type INSTANCE)
+;+		(allowed-classes Event)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot alternative_common_error
+		(type INSTANCE)
+;+		(allowed-classes Common_error)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Common_error
+	(is-a Action)
+	(role concrete))
+
+(defclass Event "Events change the state of the world. Events contain pre and postconditions. An event can also imply changes in the world's circumstances."
+	(is-a Game_dynamics)
+	(role concrete)
+	(multislot creates_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(multislot changes_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write))
+	(multislot destroys_game_element
+		(type INSTANCE)
+;+		(allowed-classes Game_element)
+		(create-accessor read-write)))
+
+(defclass Setting
+	(is-a Game_world_concept)
+	(role concrete)
+	(multislot offers_affordance
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write)))
+
+(defclass Affordance
+	(is-a Game_world_concept)
+	(role concrete)
+	(single-slot provided_by_game_world_concept
+		(type INSTANCE)
+;+		(allowed-classes Game_world_concept)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot affordance_children
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(single-slot required_by_game_dynamics
+		(type INSTANCE)
+;+		(allowed-classes Game_dynamics)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot affordance_parent
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Design_concept "A design concept is a concept that is part of the chosen / developed architecture. There may be other frameworks/designs/technological solutions that do not employ any of these concepts. Moreover, they are not part of the game world, not the training domain, nor the didactics, nor the trainee."
+	(is-a USER)
+	(role concrete))
+
+(defclass Intelligent_agent "An intelligent software agent that may control NPCs (characters), environmental features (e.g. the weather), and intelligent objects."
+	(is-a Design_concept)
+	(role concrete)
+	(multislot controls_functional_component
+		(type INSTANCE)
+;+		(allowed-classes PEG+Functional+Component)
+		(create-accessor read-write)))
+
+(defclass PEG+Functional+Component "A system component is an abstract part of the system that is responsible for a reasonably secluded or isolated functionality and only meagerly interacts with other components. A component should be eligible for solitary development with an interface to provide data transfer to and from the rest of the system."
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Action_planner
+	(is-a PEG+Functional+Component)
+	(role concrete))
+
+(defclass Scaffolding_component
+	(is-a PEG+Functional+Component)
+	(role concrete)
+	(single-slot executes_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Reflection_component
+	(is-a PEG+Functional+Component)
+	(role concrete))
+
+(defclass Learner_model
+	(is-a PEG+Functional+Component)
+	(role concrete))
+
+(defclass Authoring_tool
+	(is-a PEG+Functional+Component)
+	(role concrete)
+	(multislot specifies_scenario_constraint
+		(type INSTANCE)
+;+		(allowed-classes Scenario_constraint)
+		(create-accessor read-write)))
+
+(defclass Scenario_creator
+	(is-a PEG+Functional+Component)
+	(role concrete)
+	(multislot generates_scenario_plan
+		(type INSTANCE)
+;+		(allowed-classes Scenario_plan)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot satisfies_scenario_constraint
+		(type INSTANCE)
+;+		(allowed-classes Scenario_constraint)
+		(create-accessor read-write)))
+
+(defclass Object_selector
+	(is-a PEG+Functional+Component)
+	(role concrete)
+	(multislot uses_annotated_game_element
+		(type INSTANCE)
+;+		(allowed-classes Annotated_game_element)
+		(create-accessor read-write)))
+
+(defclass Virtual_world
+	(is-a PEG+Functional+Component)
+	(role concrete))
+
+(defclass NPC
+	(is-a PEG+Functional+Component)
+	(role concrete))
+
+(defclass Learning_goal
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Action_sequence
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Avatar
+	(is-a Design_concept)
+	(role concrete)
+	(single-slot part_of_virtual_world
+		(type INSTANCE)
+;+		(allowed-classes Virtual_world)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Scenario_plan
+	(is-a Design_concept)
+	(role concrete)
+	(single-slot specifies_action_sequence
+		(type INSTANCE)
+;+		(allowed-classes Action_sequence)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot specifies_narrative_goal
+		(type INSTANCE)
+;+		(allowed-classes Narrative_goal)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot has_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot addresses_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Learning_goal)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot has_time_out
+		(type INSTANCE)
+;+		(allowed-classes Time_out)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot specifies_virtual_world
+		(type INSTANCE)
+;+		(allowed-classes Virtual_world)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass User
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Instructor "The person responsible for the trainee's development."
+	(is-a User)
+	(role concrete)
+	(single-slot uses_authoring_tool
+		(type INSTANCE)
+;+		(allowed-classes Authoring_tool)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot controls_functional_component
+		(type INSTANCE)
+;+		(allowed-classes PEG+Functional+Component)
+		(create-accessor read-write)))
+
+(defclass Learner "The human player controlling the trainee avatar. It is also the person who is currently under training to obtain the skills defined in the task domain ontology."
+	(is-a User)
+	(role concrete)
+	(multislot works_on_personalized_learning_goal
+		(type INSTANCE)
+;+		(allowed-classes Personalized_learning_goal)
+		(create-accessor read-write))
+	(multislot controls_character
+		(type INSTANCE)
+;+		(allowed-classes Character)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot is_in_mental_state
+		(type INSTANCE)
+;+		(allowed-classes Mental_state)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot displayed_behaviour
+		(type INSTANCE)
+;+		(allowed-classes Behavior)
+		(create-accessor read-write))
+	(single-slot controls_avatar
+		(type INSTANCE)
+;+		(allowed-classes Avatar)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot possesses_competence_level
+		(type INSTANCE)
+;+		(allowed-classes Competence_level)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Time_out
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Scenario_constraint
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Annotated_game_element
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Narrative_goal
+	(is-a Design_concept)
+	(role concrete))
+
+(defclass Ontology
+	(is-a Design_concept)
+	(role concrete)
+	(multislot contains_annotated_game_element
+		(type INSTANCE)
+;+		(allowed-classes Annotated_game_element)
+		(create-accessor read-write)))
+
+(defclass Level_of_scaffolding
+	(is-a Design_concept)
+	(role concrete)
+	(single-slot linked_to_scaffolding_intervention
+		(type INSTANCE)
+;+		(allowed-classes Scaffolding_intervention)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Scaffolding_intervention
+	(is-a Design_concept)
+	(role concrete)
+	(single-slot is_sent_to_NPC
+		(type INSTANCE)
+;+		(allowed-classes NPC)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Affordance_Implementation
+	(is-a Design_concept)
+	(role concrete)
+	(single-slot implements
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot actors
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot min_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot constraints
+		(type INSTANCE)
+;+		(allowed-classes Affordance_Implementation)
+		(create-accessor read-write))
+	(single-slot max_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot smartObject
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot requires
+		(type INSTANCE)
+;+		(allowed-classes AtomTask)
+		(create-accessor read-write)))
+
+(defclass ScenarioTemplate
+	(is-a Design_concept)
+	(role concrete)
+	(multislot tasks
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass DecompositionSchema
+	(is-a Design_concept)
+	(role concrete)
+	(multislot precondition_services
+		(type INSTANCE)
+;+		(allowed-classes Affordance)
+		(create-accessor read-write))
+	(multislot precondition_objects
+		(type INSTANCE)
+;+		(allowed-classes AbstractSmartObject)
+		(create-accessor read-write))
+	(single-slot min_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot decomposition
+		(type INSTANCE)
+;+		(allowed-classes Task)
+		(create-accessor read-write))
+	(single-slot max_difficulty
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot task
+		(type INSTANCE)
+;+		(allowed-classes Task)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))

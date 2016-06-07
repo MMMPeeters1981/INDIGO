@@ -1,0 +1,1980 @@
+; Sat May 17 00:53:20 CEST 2014
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Flow] of  Emotional_state
+)
+
+([ontology_Class0] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "toaster")
+	(offers [SO_ontology_Class20049])
+	(parents [ontology_Class50031])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class3]))
+
+([ontology_Class10000] of  AtomTask
+
+	(name "clean_chemical")
+	(uses
+		[ontology_Class40011]
+		[SO_ontology_Class20009]))
+
+([ontology_Class10001] of  Affordance
+
+	(affordance_children
+		[ontology_Class40040]
+		[ontology_Class40041]
+		[ontology_Class40038])
+	(affordance_parent [ontology_Class30002])
+	(name "burn"))
+
+([ontology_Class10002] of  AtomTask
+
+	(name "ignite")
+	(uses
+		[ontology_Class2]
+		[ontology_Class10004]))
+
+([ontology_Class10004] of  Affordance
+
+	(name "ignition"))
+
+([ontology_Class10008] of  Affordance
+
+	(name "water"))
+
+([ontology_Class10009] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "tap")
+	(offers [ontology_Class20003]))
+
+([ontology_Class10010] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "brook")
+	(offers [ontology_Class10012])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([ontology_Class10012] of  Affordance_Implementation
+
+	(implements [ontology_Class10008])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(smartObject [ontology_Class10010]))
+
+([ontology_Class2] of  Affordance
+
+	(affordance_children [SO_ontology_Class50006])
+	(name "fuel"))
+
+([ontology_Class20000] of  AtomTask
+
+	(name "bandage_wound")
+	(uses
+		[ontology_Class40013]
+		[ontology_Class30002]))
+
+([ontology_Class20002] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class50024])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class10002])
+	(smartObject [ontology_Class70010]))
+
+([ontology_Class20003] of  Affordance_Implementation
+
+	(implements [ontology_Class10008])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class10009]))
+
+([ontology_Class20006] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "curtains")
+	(offers [ontology_Class20007])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class3]))
+
+([ontology_Class20007] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class20006]))
+
+([ontology_Class20009] of  AtomTask
+
+	(name "get_heat_burn")
+	(uses [ontology_Class50024]))
+
+([ontology_Class30000] of  Affordance_Implementation
+
+	(implements [ontology_Class50024])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class50026]))
+
+([ontology_Class30001] of  DecompositionSchema
+
+	(decomposition [ontology_Class10000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_objects [SO_ontology_Class20006])
+	(task [ontology_Class40017]))
+
+([ontology_Class30002] of  Affordance
+
+	(affordance_children [ontology_Class10001])
+	(affordance_parent [ontology_Class70016])
+	(name "injury"))
+
+([ontology_Class30003] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class40040])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class40010])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class30004] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "drain_cleaner")
+	(offers [ontology_Class40005])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class3]))
+
+([ontology_Class40000] of  Affordance
+
+	(name "current"))
+
+([ontology_Class40005] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class60001])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class30004]))
+
+([ontology_Class40007] of  AgentType_intelligent_object
+
+	(children
+		[ontology_Class40042]
+		[SO_ontology_Class13])
+	(name "human")
+	(offers [ontology_Class50055])
+	(type "human"))
+
+([ontology_Class40010] of  AtomTask
+
+	(name "get_burn_chem")
+	(uses [ontology_Class40011]))
+
+([ontology_Class40011] of  Affordance
+
+	(affordance_children
+		[SO_ontology_Class50000]
+		[SO_ontology_Class60001])
+	(name "chemical"))
+
+([ontology_Class40012] of  Affordance
+
+	(name "cold"))
+
+([ontology_Class40013] of  Affordance
+
+	(name "bandage"))
+
+([ontology_Class40016] of  Task
+
+	(decompositions
+		[SO_ontology_Class40001]
+		[SO_ontology_Class10003]
+		[SO_ontology_Class30000]
+		[SO_ontology_Class40002])
+	(name "treat"))
+
+([ontology_Class40017] of  Task
+
+	(decompositions
+		[ontology_Class30001]
+		[ontology_Class40022]
+		[ontology_Class50039]
+		[ontology_Class70007]
+		[ontology_Class70017])
+	(name "secure_environment"))
+
+([ontology_Class40022] of  DecompositionSchema
+
+	(decomposition [ontology_Class50056])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_objects [ontology_Class70010])
+	(task [ontology_Class40017]))
+
+([ontology_Class40027] of  Affordance
+
+	(name "extinguisher"))
+
+([ontology_Class40029] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "fire_extinguisher")
+	(parents [ontology_Class50060])
+	(unexpected_settings [ontology_Class50006]))
+
+([ontology_Class40035] of  ScenarioTemplate
+
+	(tasks
+		[ontology_Class40017]
+		[ontology_Class70012]
+		[ontology_Class40016]))
+
+([ontology_Class40038] of  Affordance
+
+	(affordance_parent [ontology_Class10001])
+	(name "thermal_burn"))
+
+([ontology_Class40039] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class40038])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class20009])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class40040] of  Affordance
+
+	(affordance_parent [ontology_Class10001])
+	(name "chem_burn"))
+
+([ontology_Class40041] of  Affordance
+
+	(affordance_parent [ontology_Class10001])
+	(name "electric_burn"))
+
+([ontology_Class40042] of  Agent
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "victim")
+	(offers
+		[ontology_Class40039]
+		[ontology_Class40043]
+		[ontology_Class30003]
+		[ontology_Class50057]
+		[ontology_Class60023]
+		[ontology_Class60000]
+		[ontology_Class70002]
+		[ontology_Class70004]
+		[ontology_Class70021]
+		[SO_ontology_Class0]
+		[SO_ontology_Class40007]
+		[SO_ontology_Class40008]
+		[SO_ontology_Class40009]
+		[SO_ontology_Class40011]
+		[SO_ontology_Class40012]
+		[SO_ontology_Class40015]
+		[SO_ontology_Class40017]
+		[SO_ontology_Class40018])
+	(parents [ontology_Class40007])
+	(type "victim"))
+
+([ontology_Class40043] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class40041])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class40045])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class40045] of  AtomTask
+
+	(name "electrocute")
+	(uses [ontology_Class40000]))
+
+([ontology_Class40050] of  AtomTask
+
+	(name "cool_burn")
+	(uses
+		[ontology_Class10008]
+		[ontology_Class10001]))
+
+([ontology_Class50000] of  AtomTask
+
+	(name "perform_CPR")
+	(uses
+		[ontology_Class60014]
+		[ontology_Class50020]))
+
+([ontology_Class50002] of  SmartObjectType
+
+	(children
+		[ontology_Class50004]
+		[ontology_Class50005]
+		[ontology_Class50011]
+		[ontology_Class50013]
+		[ontology_Class70006]
+		[SO_ontology_Class20012])
+	(name "burning_object")
+	(offers [ontology_Class50003]))
+
+([ontology_Class50003] of  Affordance_Implementation
+
+	(implements [ontology_Class10004])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class50002]))
+
+([ontology_Class50004] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "fireplace")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([ontology_Class50005] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "candle")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([ontology_Class50006] of  Setting
+
+	(name "Park"))
+
+([ontology_Class50008] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "iron")
+	(parents
+		[ontology_Class50026]
+		[ontology_Class50031])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([ontology_Class50011] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "bbq")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000]))
+
+([ontology_Class50012] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3])
+	(name "bandage")
+	(unexpected_settings [ontology_Class50006]))
+
+([ontology_Class50013] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "gas_stove")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([ontology_Class50014] of  AtomTask
+
+	(name "turn_off_power")
+	(uses [ontology_Class40000]))
+
+([ontology_Class50018] of  Affordance_Implementation
+
+	(implements [ontology_Class2])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class50019]))
+
+([ontology_Class50019] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "clothing")
+	(offers [ontology_Class50018]))
+
+([ontology_Class50020] of  Affordance
+
+	(name "unconsciousness"))
+
+([ontology_Class50021] of  Affordance
+
+	(name "panic"))
+
+([ontology_Class50023] of  Affordance_Implementation
+
+	(actors
+		"self"
+		"self")
+	(implements [ontology_Class50051])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires
+		[ontology_Class10002]
+		[SO_ontology_Class50005])
+	(smartObject [ontology_Class70011]))
+
+([ontology_Class50024] of  Affordance
+
+	(name "heat"))
+
+([ontology_Class50026] of  SmartObjectType
+
+	(children
+		[ontology_Class50046]
+		[ontology_Class50008]
+		[SO_ontology_Class20013]
+		[SO_ontology_Class20066]
+		[SO_ontology_Class50010])
+	(name "hot_object")
+	(offers [ontology_Class30000]))
+
+([ontology_Class50031] of  SmartObjectType
+
+	(children
+		[ontology_Class50008]
+		[ontology_Class0]
+		[SO_ontology_Class20054]
+		[SO_ontology_Class20038]
+		[SO_ontology_Class1])
+	(name "electric_object"))
+
+([ontology_Class50039] of  DecompositionSchema
+
+	(decomposition [ontology_Class50014])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_objects [ontology_Class50031])
+	(task [ontology_Class40017]))
+
+([ontology_Class50046] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "oven")
+	(parents [ontology_Class50026])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class3]))
+
+([ontology_Class50051] of  Affordance
+
+	(name "smoke"))
+
+([ontology_Class50055] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[SO_ontology_Class14]
+		[SO_ontology_Class0]
+		[ontology_Class50057]
+		[ontology_Class70004]
+		[SO_ontology_Class40009]
+		[SO_ontology_Class40007]
+		[SO_ontology_Class40008])
+	(implements [ontology_Class50021])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20005])
+	(smartObject [ontology_Class40007]))
+
+([ontology_Class50056] of  AtomTask
+
+	(name "extinguish_fire")
+	(uses [ontology_Class40027]))
+
+([ontology_Class50057] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[SO_ontology_Class40009]
+		[ontology_Class70002]
+		[SO_ontology_Class40007]
+		[ontology_Class50055]
+		[SO_ontology_Class40008])
+	(implements [ontology_Class50020])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class50058])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class50058] of  AtomTask
+
+	(name "burn_throat_smoke")
+	(uses [ontology_Class50051]))
+
+([ontology_Class50059] of  Affordance_Implementation
+
+	(implements [ontology_Class40027])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [ontology_Class50060]))
+
+([ontology_Class50060] of  SmartObjectType
+
+	(children
+		[ontology_Class40029]
+		[ontology_Class50061]
+		[SO_ontology_Class6])
+	(name "extinguisher")
+	(offers [ontology_Class50059]))
+
+([ontology_Class50061] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "fire_blanket")
+	(parents [ontology_Class50060])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([ontology_Class60000] of  Affordance_Implementation
+
+	(constraints
+		[ontology_Class60023]
+		[SO_ontology_Class40011]
+		[SO_ontology_Class40012]
+		[SO_ontology_Class40017]
+		[SO_ontology_Class40018]
+		[SO_ontology_Class40015])
+	(implements [ontology_Class70001])
+	(max_difficulty 0)
+	(min_difficulty 0)
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class60001] of  AtomTask
+
+	(name "determine_unconsciousness")
+	(uses [ontology_Class50020]))
+
+([ontology_Class60003] of  AtomTask
+
+	(name "call_for_professional_aid")
+	(uses [SO_ontology_Class7]))
+
+([ontology_Class60004] of  Task
+
+	(decompositions
+		[SO_ontology_Class40003]
+		[ontology_Class60005])
+	(name "ensure_ABC"))
+
+([ontology_Class60005] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class60001]
+		[ontology_Class60006])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class50020])
+	(task [ontology_Class60004]))
+
+([ontology_Class60006] of  Task
+
+	(decompositions
+		[ontology_Class60012]
+		[SO_ontology_Class40019]
+		[ontology_Class60009])
+	(name "ensure_breathing"))
+
+([ontology_Class60008] of  Affordance
+
+	(name "grogginess"))
+
+([ontology_Class60009] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class60010]
+		[ontology_Class60003]
+		[ontology_Class60015])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class70001])
+	(task [ontology_Class60006]))
+
+([ontology_Class60010] of  AtomTask
+
+	(name "chin_lift1")
+	(uses
+		[ontology_Class50020]
+		[ontology_Class70001]))
+
+([ontology_Class60012] of  DecompositionSchema
+
+	(decomposition
+		[SO_ontology_Class40020]
+		[ontology_Class60003]
+		[ontology_Class50000])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(precondition_services [ontology_Class60014])
+	(task [ontology_Class60006]))
+
+([ontology_Class60014] of  Affordance
+
+	(name "no_breathing"))
+
+([ontology_Class60015] of  AtomTask
+
+	(name "apply_recovery_position")
+	(uses [ontology_Class50020]))
+
+([ontology_Class60016] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class40050]
+		[ontology_Class20000])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_services
+		[ontology_Class70003]
+		[ontology_Class10001])
+	(task [ontology_Class60017]))
+
+([ontology_Class60017] of  Task
+
+	(decompositions
+		[ontology_Class60020]
+		[SO_ontology_Class40004]
+		[ontology_Class60016]
+		[SO_ontology_Class40005]
+		[SO_ontology_Class20058]
+		[SO_ontology_Class20057])
+	(name "treat_burn"))
+
+([ontology_Class60018] of  AtomTask
+
+	(name "remove_clothing")
+	(uses [ontology_Class60022]))
+
+([ontology_Class60020] of  DecompositionSchema
+
+	(decomposition [ontology_Class20000])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_services
+		[ontology_Class50020]
+		[ontology_Class10001])
+	(task [ontology_Class60017]))
+
+([ontology_Class60022] of  Affordance
+
+	(name "clothing_near_wound"))
+
+([ontology_Class60023] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[ontology_Class60000]
+		[ontology_Class70002])
+	(implements [ontology_Class60014])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class50058])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class60024] of  Affordance_Implementation
+
+	(implements [ontology_Class40013])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [ontology_Class60025]))
+
+([ontology_Class60025] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3])
+	(name "gauze_bandage")
+	(offers [ontology_Class60024])
+	(unexpected_settings [ontology_Class50006]))
+
+([ontology_Class60026] of  Affordance_Implementation
+
+	(implements [ontology_Class40013])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [ontology_Class60027]))
+
+([ontology_Class60027] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "towel")
+	(offers
+		[ontology_Class60026]
+		[SO_ontology_Class10002])
+	(unexpected_settings [ontology_Class50006]))
+
+([ontology_Class60028] of  AtomTask
+
+	(name "talk_to_person")
+	(uses [ontology_Class50021]))
+
+([ontology_Class70001] of  Affordance
+
+	(name "breathing"))
+
+([ontology_Class70002] of  Affordance_Implementation
+
+	(constraints
+		[SO_ontology_Class0]
+		[ontology_Class50057]
+		[ontology_Class60023]
+		[ontology_Class70004]
+		[SO_ontology_Class40011]
+		[SO_ontology_Class40012]
+		[SO_ontology_Class40009]
+		[SO_ontology_Class40007]
+		[SO_ontology_Class40008])
+	(implements [ontology_Class70003])
+	(max_difficulty 0)
+	(min_difficulty 0)
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class70003] of  Affordance
+
+	(name "consciousness"))
+
+([ontology_Class70004] of  Affordance_Implementation
+
+	(actors "Self")
+	(constraints
+		[SO_ontology_Class40009]
+		[ontology_Class70002]
+		[SO_ontology_Class40007]
+		[ontology_Class50055]
+		[SO_ontology_Class40008])
+	(implements [ontology_Class50020])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(requires [ontology_Class70005])
+	(smartObject [ontology_Class40042]))
+
+([ontology_Class70005] of  AtomTask
+
+	(name "fall_down")
+	(uses
+		[SO_ontology_Class20059]
+		[ontology_Class70016]))
+
+([ontology_Class70006] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "camp_fire")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([ontology_Class70007] of  DecompositionSchema
+
+	(max_difficulty 0)
+	(min_difficulty 0)
+	(task [ontology_Class40017]))
+
+([ontology_Class70009] of  AgentType_intelligent_object
+
+	(children
+		[ontology_Class70010]
+		[ontology_Class70011])
+	(name "fire")
+	(type "fire"))
+
+([ontology_Class70010] of  Agent
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "small_fire")
+	(offers
+		[ontology_Class20002]
+		[SO_ontology_Class30001])
+	(parents [ontology_Class70009])
+	(type "fire"))
+
+([ontology_Class70011] of  Agent
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "large_fire")
+	(offers
+		[ontology_Class50023]
+		[SO_ontology_Class50015]
+		[SO_ontology_Class50016])
+	(parents [ontology_Class70009])
+	(type "fire"))
+
+([ontology_Class70012] of  Task
+
+	(decompositions
+		[ontology_Class70015]
+		[ontology_Class70013])
+	(name "calm_person"))
+
+([ontology_Class70013] of  DecompositionSchema
+
+	(decomposition [ontology_Class60028])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class50021])
+	(task [ontology_Class70012]))
+
+([ontology_Class70015] of  DecompositionSchema
+
+	(max_difficulty 0)
+	(min_difficulty 0)
+	(task [ontology_Class70012]))
+
+([ontology_Class70016] of  Affordance
+
+	(affordance_children [ontology_Class30002])
+	(name "danger"))
+
+([ontology_Class70017] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class70018]
+		[ontology_Class70019])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_objects [ontology_Class70011])
+	(task [ontology_Class40017]))
+
+([ontology_Class70018] of  AtomTask
+
+	(name "remove_victim_from_danger"))
+
+([ontology_Class70019] of  AtomTask
+
+	(name "call_fire_department")
+	(uses [SO_ontology_Class7]))
+
+([ontology_Class70021] of  Affordance_Implementation
+
+	(implements [ontology_Class60022])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [ontology_Class40042]))
+
+([Ontology_validated2_Class2] of  %3APAL-CONSTRAINT
+)
+
+([Ontology_validated_Class102] of  %3AINSTANCE-ANNOTATION
+
+	(%3ACREATION-TIMESTAMP "2013.07.08 20:51:00.795 CEST")
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class105] of  %3AINSTANCE-ANNOTATION
+
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class120] of  %3AINSTANCE-ANNOTATION
+
+	(%3ACREATION-TIMESTAMP "2013.07.08 20:53:10.531 CEST")
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class121] of  %3AINSTANCE-ANNOTATION
+
+	(%3ACREATION-TIMESTAMP "2013.07.08 20:53:14.651 CEST")
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class122] of  %3AINSTANCE-ANNOTATION
+
+	(%3ACREATION-TIMESTAMP "2013.07.08 20:53:18.227 CEST")
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class44] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATION-TEXT "Self-directedness is a competence one can obtain or develop. The trainee is able to take control over his/her own learning process, chooses his/her own exercises, recognizes his/her own weaknesses and actively searches for ways to overcome these weaknesses by directed training. Leads to a feeling of empowerment, and is also a condition for experiencing flow. A trick to provide learners with the sense of control over their own learning is by offering them the choice between several exercises that only vary on surface features (content that is not relevant for the task, but only serves as non-related context), whereas the structure features remain the same (task-specific and relevant features. See also Shared_control.")
+	(%3ACREATION-TIMESTAMP "2013.07.08 16:02:37.021 CEST")
+	(%3ACREATOR "Marieke"))
+
+([Ontology_validated_Class72] of  %3AINSTANCE-ANNOTATION
+
+	(%3AANNOTATION-TEXT "Calm down victim, bystanders, and family/friends. Show involvement and empathy.")
+	(%3ACREATION-TIMESTAMP "2013.07.08 20:04:39.996 CEST")
+	(%3ACREATOR "Marieke"))
+
+([SO_ontology_Class0] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[SO_ontology_Class40009]
+		[ontology_Class70002]
+		[SO_ontology_Class40007]
+		[ontology_Class50055]
+		[SO_ontology_Class40008])
+	(implements [ontology_Class50020])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class40045])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class1] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "open_wiring")
+	(offers [SO_ontology_Class2])
+	(parents [ontology_Class50031])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class10] of  SmartObjectType
+
+	(children
+		[SO_ontology_Class11]
+		[SO_ontology_Class12])
+	(name "phone")
+	(offers [SO_ontology_Class9]))
+
+([SO_ontology_Class10000] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "methylated_spirits")
+	(offers [SO_ontology_Class10001])
+	(unexpected_settings
+		[SO_ontology_Class20000]
+		[SO_ontology_Class4]))
+
+([SO_ontology_Class10001] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class10000]))
+
+([SO_ontology_Class10002] of  Affordance_Implementation
+
+	(implements [ontology_Class2])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [ontology_Class60027]))
+
+([SO_ontology_Class10003] of  DecompositionSchema
+
+	(max_difficulty 0)
+	(min_difficulty 0)
+	(task [ontology_Class40016]))
+
+([SO_ontology_Class11] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "mobile_phone")
+	(parents [SO_ontology_Class10]))
+
+([SO_ontology_Class12] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "land_line")
+	(parents [SO_ontology_Class10])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class13] of  Agent
+
+	(expected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "bystander")
+	(offers [SO_ontology_Class14])
+	(parents [ontology_Class40007])
+	(type "bystander"))
+
+([SO_ontology_Class14] of  Affordance_Implementation
+
+	(constraints [ontology_Class50055])
+	(implements [SO_ontology_Class7])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class13]))
+
+([SO_ontology_Class2] of  Affordance_Implementation
+
+	(implements [ontology_Class40000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class1]))
+
+([SO_ontology_Class20000] of  Setting
+
+	(name "Restaurant"))
+
+([SO_ontology_Class20002] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "decorations")
+	(offers [SO_ontology_Class20003])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([SO_ontology_Class20003] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20002]))
+
+([SO_ontology_Class20005] of  AtomTask
+
+	(name "panic")
+	(uses [ontology_Class70016]))
+
+([SO_ontology_Class20006] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "hydrochloric acid")
+	(offers
+		[SO_ontology_Class20008]
+		[SO_ontology_Class30002]
+		[SO_ontology_Class60005])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20008] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class60001])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20006]))
+
+([SO_ontology_Class20009] of  Affordance
+
+	(name "base"))
+
+([SO_ontology_Class20010] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "base solution")
+	(offers [SO_ontology_Class20011])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20011] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20009])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20010]))
+
+([SO_ontology_Class20012] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "burner")
+	(parents [ontology_Class50002])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20013] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "hot_plate")
+	(parents [ontology_Class50026])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class20014] of  Agent
+
+	(expected_settings [SO_ontology_Class3])
+	(name "chem_reaction")
+	(offers
+		[SO_ontology_Class20015]
+		[SO_ontology_Class20023])
+	(type "chem_reaction")
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20015] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class50024])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20016])
+	(smartObject [SO_ontology_Class20014]))
+
+([SO_ontology_Class20016] of  AtomTask
+
+	(name "react")
+	(uses
+		[SO_ontology_Class20017]
+		[SO_ontology_Class20018]))
+
+([SO_ontology_Class20017] of  Affordance
+
+	(name "water_reactor"))
+
+([SO_ontology_Class20018] of  Affordance
+
+	(name "drop_of_water"))
+
+([SO_ontology_Class20019] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20018])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20020]))
+
+([SO_ontology_Class20020] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "ice")
+	(offers [SO_ontology_Class20019]))
+
+([SO_ontology_Class20021] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20018])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20022]))
+
+([SO_ontology_Class20022] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000])
+	(name "damp_air")
+	(offers [SO_ontology_Class20021]))
+
+([SO_ontology_Class20023] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class10004])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20016])
+	(smartObject [SO_ontology_Class20014]))
+
+([SO_ontology_Class20024] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "butyllithium")
+	(offers [SO_ontology_Class20025])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20025] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20017])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20024]))
+
+([SO_ontology_Class20026] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "lithium_aluminium_hydride")
+	(offers [SO_ontology_Class20027])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20027] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20017])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20026]))
+
+([SO_ontology_Class20028] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "organice_garbage_bin")
+	(offers
+		[SO_ontology_Class20029]
+		[SO_ontology_Class20032])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20029] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20028]))
+
+([SO_ontology_Class20030] of  SmartObject
+
+	(expected_settings [SO_ontology_Class3])
+	(name "organic_solvent")
+	(offers [SO_ontology_Class20031])
+	(unexpected_settings
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20031] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20030]))
+
+([SO_ontology_Class20032] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20018])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20028]))
+
+([SO_ontology_Class20033] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "napkin")
+	(offers [SO_ontology_Class20034]))
+
+([SO_ontology_Class20034] of  Affordance_Implementation
+
+	(implements [ontology_Class2])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20033]))
+
+([SO_ontology_Class20035] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "bleach")
+	(offers
+		[SO_ontology_Class20036]
+		[SO_ontology_Class60004])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20036] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class60001])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20035]))
+
+([SO_ontology_Class20037] of  Affordance_Implementation
+
+	(actors "victim")
+	(implements [ontology_Class40000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20039])
+	(smartObject [SO_ontology_Class20038]))
+
+([SO_ontology_Class20038] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "hair_dryer")
+	(offers [SO_ontology_Class20037])
+	(parents [ontology_Class50031])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20039] of  AtomTask
+
+	(name "drop_in_water")
+	(uses [ontology_Class10008]))
+
+([SO_ontology_Class20040] of  Affordance_Implementation
+
+	(actors "victim")
+	(implements [ontology_Class40000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20042])
+	(smartObject [SO_ontology_Class20041]))
+
+([SO_ontology_Class20041] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "high_voltage_cable")
+	(offers [SO_ontology_Class20040])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20042] of  AtomTask
+
+	(name "connect")
+	(uses [SO_ontology_Class20043]))
+
+([SO_ontology_Class20043] of  Affordance
+
+	(name "connector"))
+
+([SO_ontology_Class20044] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20043])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20045]))
+
+([SO_ontology_Class20045] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "kite")
+	(offers [SO_ontology_Class20044])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20046] of  Affordance_Implementation
+
+	(actors "victim")
+	(implements [SO_ontology_Class20043])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20048])
+	(smartObject [SO_ontology_Class20047]))
+
+([SO_ontology_Class20047] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "tree")
+	(offers [SO_ontology_Class20046]))
+
+([SO_ontology_Class20048] of  AtomTask
+
+	(name "climb"))
+
+([SO_ontology_Class20049] of  Affordance_Implementation
+
+	(actors "victim")
+	(implements [ontology_Class40000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class20050])
+	(smartObject [ontology_Class0]))
+
+([SO_ontology_Class20050] of  AtomTask
+
+	(name "pry")
+	(uses [SO_ontology_Class20051]))
+
+([SO_ontology_Class20051] of  Affordance
+
+	(name "metal_prier"))
+
+([SO_ontology_Class20052] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20051])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20053]))
+
+([SO_ontology_Class20053] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "knife")
+	(offers [SO_ontology_Class20052])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([SO_ontology_Class20054] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class3]
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "broken_electric_equipment")
+	(offers [SO_ontology_Class20055])
+	(parents [ontology_Class50031])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class20055] of  Affordance_Implementation
+
+	(implements [ontology_Class40000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20054]))
+
+([SO_ontology_Class20057] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class60018]
+		[ontology_Class20000])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(precondition_services
+		[ontology_Class50020]
+		[ontology_Class10001])
+	(task [ontology_Class60017]))
+
+([SO_ontology_Class20058] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class40050]
+		[ontology_Class60018]
+		[ontology_Class20000])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(precondition_services
+		[ontology_Class70003]
+		[ontology_Class10001])
+	(task [ontology_Class60017]))
+
+([SO_ontology_Class20059] of  Affordance
+
+	(name "obstacle"))
+
+([SO_ontology_Class20060] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20059])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20061]))
+
+([SO_ontology_Class20061] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "rocks")
+	(offers [SO_ontology_Class20060])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20062] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20059])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20063]))
+
+([SO_ontology_Class20063] of  SmartObject
+
+	(expected_settings [SO_ontology_Class4])
+	(name "toys")
+	(offers [SO_ontology_Class20062])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class20064] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class20059])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20065]))
+
+([SO_ontology_Class20065] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "step")
+	(offers [SO_ontology_Class20064])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class20066] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "boiling_water")
+	(parents [ontology_Class50026])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class3] of  Setting
+
+	(name "Laboratorium"))
+
+([SO_ontology_Class30000] of  DecompositionSchema
+
+	(decomposition [ontology_Class60017])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class70003])
+	(task [ontology_Class40016]))
+
+([SO_ontology_Class30001] of  Affordance_Implementation
+
+	(actors "self")
+	(implements [ontology_Class70016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class10002])
+	(smartObject [ontology_Class70010]))
+
+([SO_ontology_Class30002] of  Affordance_Implementation
+
+	(implements [ontology_Class70016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20006]))
+
+([SO_ontology_Class30004] of  Affordance_Implementation
+
+	(implements [ontology_Class40013])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(smartObject [SO_ontology_Class30005]))
+
+([SO_ontology_Class30005] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "tshirt")
+	(offers [SO_ontology_Class30004]))
+
+([SO_ontology_Class4] of  Setting
+
+	(name "Home"))
+
+([SO_ontology_Class40000] of  Affordance_Implementation
+
+	(implements [ontology_Class10008])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class50001]))
+
+([SO_ontology_Class40001] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class60004]
+		[ontology_Class60017])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class60008])
+	(task [ontology_Class40016]))
+
+([SO_ontology_Class40002] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class60004]
+		[ontology_Class60017])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class50020])
+	(task [ontology_Class40016]))
+
+([SO_ontology_Class40003] of  DecompositionSchema
+
+	(decomposition [SO_ontology_Class40010])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_services [ontology_Class60008])
+	(task [ontology_Class60004]))
+
+([SO_ontology_Class40004] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class40050]
+		[ontology_Class20000])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(precondition_services
+		[ontology_Class10001]
+		[ontology_Class60008])
+	(task [ontology_Class60017]))
+
+([SO_ontology_Class40005] of  DecompositionSchema
+
+	(decomposition
+		[ontology_Class40050]
+		[ontology_Class60018]
+		[ontology_Class20000])
+	(max_difficulty 2)
+	(min_difficulty 2)
+	(precondition_services
+		[ontology_Class10001]
+		[ontology_Class60008])
+	(task [ontology_Class60017]))
+
+([SO_ontology_Class40007] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[SO_ontology_Class0]
+		[ontology_Class50057]
+		[ontology_Class70004]
+		[ontology_Class70002]
+		[ontology_Class50055])
+	(implements [ontology_Class60008])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class40045])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40008] of  Affordance_Implementation
+
+	(actors "Self")
+	(constraints
+		[SO_ontology_Class0]
+		[ontology_Class50057]
+		[ontology_Class70004]
+		[ontology_Class70002]
+		[ontology_Class50055])
+	(implements [ontology_Class60008])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(requires [ontology_Class70005])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40009] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[SO_ontology_Class0]
+		[ontology_Class50057]
+		[ontology_Class70004]
+		[ontology_Class70002]
+		[ontology_Class50055])
+	(implements [ontology_Class60008])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class50058])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40010] of  AtomTask
+
+	(name "determine_grogginess")
+	(uses [ontology_Class60008]))
+
+([SO_ontology_Class40011] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[ontology_Class60000]
+		[ontology_Class70002])
+	(implements [ontology_Class60014])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class40014])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40012] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints
+		[ontology_Class60000]
+		[ontology_Class70002])
+	(implements [ontology_Class60014])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class40013])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40013] of  AtomTask
+
+	(name "suffocate_chem")
+	(uses [SO_ontology_Class50000]))
+
+([SO_ontology_Class40014] of  AtomTask
+
+	(name "burn_throat_elec")
+	(uses [ontology_Class40000]))
+
+([SO_ontology_Class40015] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints [ontology_Class60000])
+	(implements [SO_ontology_Class40016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [ontology_Class50058])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40016] of  Affordance
+
+	(name "troubled_breathing"))
+
+([SO_ontology_Class40017] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints [ontology_Class60000])
+	(implements [SO_ontology_Class40016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class40014])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40018] of  Affordance_Implementation
+
+	(actors "self")
+	(constraints [ontology_Class60000])
+	(implements [SO_ontology_Class40016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires [SO_ontology_Class40013])
+	(smartObject [ontology_Class40042]))
+
+([SO_ontology_Class40019] of  DecompositionSchema
+
+	(decomposition
+		[SO_ontology_Class40021]
+		[ontology_Class60003]
+		[ontology_Class60015])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(precondition_services [SO_ontology_Class40016])
+	(task [ontology_Class60006]))
+
+([SO_ontology_Class40020] of  AtomTask
+
+	(name "chin_lift2")
+	(uses
+		[ontology_Class60014]
+		[ontology_Class50020]))
+
+([SO_ontology_Class40021] of  AtomTask
+
+	(name "chin_lift3")
+	(uses
+		[SO_ontology_Class40016]
+		[ontology_Class50020]))
+
+([SO_ontology_Class50000] of  Affordance
+
+	(affordance_parent [ontology_Class40011])
+	(name "intoxicating_chemical"))
+
+([SO_ontology_Class50001] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "fountain")
+	(offers [SO_ontology_Class40000])
+	(unexpected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000]))
+
+([SO_ontology_Class50002] of  Affordance_Implementation
+
+	(implements [ontology_Class40013])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class50003]))
+
+([SO_ontology_Class50003] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "first_aid_kit")
+	(offers [SO_ontology_Class50002])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class50005] of  AtomTask
+
+	(name "spread")
+	(uses [SO_ontology_Class50006]))
+
+([SO_ontology_Class50006] of  Affordance
+
+	(affordance_parent [ontology_Class2])
+	(name "sustaining_fuel"))
+
+([SO_ontology_Class50007] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class50008]))
+
+([SO_ontology_Class50008] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "dry_vegetation")
+	(offers [SO_ontology_Class50007])
+	(unexpected_settings [SO_ontology_Class3]))
+
+([SO_ontology_Class50010] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class20000])
+	(name "pan")
+	(offers [SO_ontology_Class50011])
+	(parents [ontology_Class50026])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([SO_ontology_Class50011] of  Affordance_Implementation
+
+	(implements [ontology_Class10004])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class50010]))
+
+([SO_ontology_Class50013] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50006])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class50014]))
+
+([SO_ontology_Class50014] of  SmartObject
+
+	(expected_settings [SO_ontology_Class20000])
+	(name "extractor_hood")
+	(offers [SO_ontology_Class50013])
+	(unexpected_settings
+		[SO_ontology_Class3]
+		[ontology_Class50006]))
+
+([SO_ontology_Class50015] of  Affordance_Implementation
+
+	(actors
+		"self"
+		"self")
+	(implements [ontology_Class50024])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires
+		[ontology_Class10002]
+		[SO_ontology_Class50005])
+	(smartObject [ontology_Class70011]))
+
+([SO_ontology_Class50016] of  Affordance_Implementation
+
+	(actors
+		"self"
+		"self")
+	(implements [ontology_Class70016])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(requires
+		[ontology_Class10002]
+		[SO_ontology_Class50005])
+	(smartObject [ontology_Class70011]))
+
+([SO_ontology_Class6] of  SmartObject
+
+	(expected_settings [ontology_Class50006])
+	(name "tough_coat")
+	(parents [ontology_Class50060]))
+
+([SO_ontology_Class60001] of  Affordance
+
+	(affordance_parent [ontology_Class40011])
+	(name "burning_chemical"))
+
+([SO_ontology_Class60002] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class60001])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class60003]))
+
+([SO_ontology_Class60003] of  SmartObject
+
+	(expected_settings
+		[SO_ontology_Class4]
+		[SO_ontology_Class3]
+		[SO_ontology_Class20000])
+	(name "ammonia")
+	(offers [SO_ontology_Class60002])
+	(unexpected_settings [ontology_Class50006]))
+
+([SO_ontology_Class60004] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50000])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20035]))
+
+([SO_ontology_Class60005] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class50000])
+	(max_difficulty 2)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class20006]))
+
+([SO_ontology_Class7] of  Affordance
+
+	(name "communication"))
+
+([SO_ontology_Class9] of  Affordance_Implementation
+
+	(implements [SO_ontology_Class7])
+	(max_difficulty 1)
+	(min_difficulty 1)
+	(smartObject [SO_ontology_Class10]))
